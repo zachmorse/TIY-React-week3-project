@@ -23,7 +23,7 @@ const reducer = function(state = initialState, action) {
 
       newState = _.cloneDeep(state);
       newState.selectedUser = userList().find(element => {
-        return element._id == userId;
+        return element._id === userId;
       });
       return newState;
 
