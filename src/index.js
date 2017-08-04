@@ -11,13 +11,10 @@ import { Provider } from "react-redux";
 import { createStore, applyMiddleware } from "redux";
 import reducers from "./reducers/index";
 
-//import styles
 import "./styles/index.css";
-// import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap/dist/css/bootstrap.css";
 
-//component imports
 import App from "./components/App";
-//BaseLayout imported...Here
 import UserList from "./containers/UserList";
 import UserDetail from "./containers/UserDetail";
 import AccountDetail from "./containers/AccountDetail";

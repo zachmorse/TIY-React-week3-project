@@ -1,4 +1,3 @@
-import { combineReducers } from "redux";
 import {
   USER_SELECTED,
   ACCOUNT_SELECTED,
@@ -6,7 +5,6 @@ import {
 } from "../actions/index";
 import userList from "../data/users";
 import _ from "lodash";
-// import update from 'immutability-helper';
 
 const initialState = {
   users: userList(),
@@ -34,13 +32,8 @@ const reducer = function(state = initialState, action) {
 
     case WITHDRAW_FUNDS:
       newState = _.cloneDeep(state);
-      const userIdx = newState.users.findIndex(
-        user => user._id === state.selectedUser
-      );
-      const accountIdx = newState.users[userIdx].accounts.findIndex(
-        account => account.id === state.selectedAccount
-      );
-      newState.users[userIdx].accounts[accountIdx].balance -= action.payload;
+      const account = newState.selectedAccount;
+      account.balance -= action.payload;
       return newState;
 
     default:

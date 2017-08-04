@@ -9,14 +9,6 @@ export function selectUser(userId) {
   };
 }
 
-/************************************
-
-You will need to create a selectAccount
-action creator here, it will take a type, and
-payload: accountId
-
-************************************/
-
 export function selectAccount(accountId) {
   return {
     type: ACCOUNT_SELECTED,
@@ -27,7 +19,6 @@ export function selectAccount(accountId) {
 export function withdrawFunds(amount) {
   return {
     type: WITHDRAW_FUNDS,
-    //need to change the amount to an integer value
     payload: parseInt(amount, 10)
   };
 }

@@ -1,17 +1,14 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import users from "../data/users";
 import { bindActionCreators } from "redux";
-import { NavLink } from "react-router-dom";
-
-import user from "../data/users";
+import { Link } from "react-router-dom";
+import Transactions from "./Transactions";
 
 class AccountDetails extends Component {
   render() {
     if (!this.props.account) {
       return <div>Please select an account...</div>;
     }
-    const { id, accountId } = this.props.match.params;
     return (
       <div className="col-md-6">
         <div className="card">
@@ -26,9 +23,10 @@ class AccountDetails extends Component {
               </div>
             </div>
           </div>
-          <NavLink className="btn btn-primary" to="/users">
+          <Transactions />
+          <Link className="btn btn-primary" to="/users">
             Back to List of Users
-          </NavLink>
+          </Link>
         </div>
       </div>
     );
