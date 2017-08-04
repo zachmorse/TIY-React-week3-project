@@ -19,8 +19,12 @@ let newState;
 const reducer = function(state = initialState, action) {
   switch (action.type) {
     case USER_SELECTED:
+      let userId = action.payload;
+
       newState = _.cloneDeep(state);
-      newState.selectedUser = action.payload;
+      newState.selectedUser = userList().find(element => {
+        return element._id == userId;
+      });
       return newState;
 
     case ACCOUNT_SELECTED:

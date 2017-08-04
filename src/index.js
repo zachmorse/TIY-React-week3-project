@@ -1,6 +1,7 @@
 //react imports
 import React from "react";
 import ReactDOM from "react-dom";
+import registerServiceWorker from "./registerServiceWorker";
 
 //router imports
 import { BrowserRouter, Switch, Route } from "react-router-dom";
@@ -48,4 +49,4 @@ ReactDOM.render(
   document.getElementById("root")
 );
 
-// registerServiceWorker();
+registerServiceWorker();
