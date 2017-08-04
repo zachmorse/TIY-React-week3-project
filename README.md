@@ -1,5 +1,5 @@
-______/--------------\______
------- Redux Bank App ------
-------\______________/------
+
+___/ --- REDUX BANK APP --- \___
+
 
 Create an application using React, React Router v4, and Redux to mimic online banking.
