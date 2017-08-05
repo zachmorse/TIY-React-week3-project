@@ -23,7 +23,11 @@ class Transactions extends Component {
   render() {
     return (
       <div>
-        <Button color="danger" onClick={this.toggle}>
+        <Button
+          color="danger"
+          onClick={this.toggle}
+          style={{ margin: "5px 0px" }}
+        >
           Withdraw Funds
         </Button>
         <Modal
@@ -32,9 +36,7 @@ class Transactions extends Component {
           className={this.props.className}
         >
           <ModalHeader toggle={this.toggle}>Withdraw Funds</ModalHeader>
-          <ModalBody>
-            How much would you like to withdraw? You currently have:
-          </ModalBody>
+          <ModalBody>How much would you like to withdraw?</ModalBody>
           <ModalFooter>
             <Button
               color="primary"
